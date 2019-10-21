@@ -1,6 +1,7 @@
 from sklearn.feature_selection import SelectKBest, f_regression, RFE
 import statsmodels.api as sm
 from sklearn.linear_model import LassoCV, LinearRegression
+import pandas as pd
 
 
 def select_kbest_freg_unscaled(X_train, y_train, k):
