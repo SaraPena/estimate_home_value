@@ -63,7 +63,7 @@ def ols_backward_elimination(X_train, y_train):
     return selected_features_BE
 
 
-    def optimal_number_of_features(X, y):
+def optimal_number_of_features(X, y):
     '''discover the optimal number of features, n, using our scaled x and y dataframes, recursive feature
     elimination and linear regression (to test the performance with each number of features).
     We will use the output of this function (the number of features) as input to the next function
