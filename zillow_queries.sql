@@ -38,7 +38,11 @@ WHERE (propertylandusetypeid = 261) and (transactiondate BETWEEN '2017-05-01' an
 SELECT parcelid, bathroomcnt, bedroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, taxamount
 from properties_2017
 JOIN predictions_2017 using(parcelid)
-WHERE (propertylandusetypeid = 261) and (transactiondate BETWEEN '2017-05-01' and '2017-06-30')
+WHERE (propertylandusetypeid = 261) and (transactiondate BETWEEN '2017-05-01' and '2017-06-30');
 
+SELECT (bathroomcnt * calculatedfinishedsquarefeet) + (bedroomcnt*calculatedfinishedsquarefeet), taxvaluedollarcnt
+from properties_2017
+JOIN predictions_2017 using(parcelid)
+WHERE (propertylandusetypeid = 261) and (transactiondate BETWEEN '2017-05-01' and '2017-06-30');
 
 
